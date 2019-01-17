@@ -613,7 +613,7 @@ class Unicorn::HttpServer
         return if @request.hijacked?
       end
       @request.headers? or headers = nil
-      http_response_write(client, status, headers, body, @request)
+      # http_response_write(client, status, headers, body, @request)
     ensure
       body.respond_to?(:close) and body.close
     end
